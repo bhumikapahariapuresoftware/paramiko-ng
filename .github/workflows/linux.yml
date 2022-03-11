@@ -23,7 +23,7 @@ jobs:
       - name: Python dependencies
         run: |
           pip install -r dev-requirements.txt
-          pip install cryptography==${{matrix.crypto_ver}} PyNaCl
+          pip install cryptography PyNaCl
           if [ ${{matrix.imgtag}} = python:2.7-buster ] || \
              [ ${{matrix.imgtag}} = python:3.6-buster ]; then
             export DEBIAN_FRONTEND=noninteractive
